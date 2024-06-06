@@ -8,7 +8,7 @@
     <div>&nbsp;</div>
     <div class="container">
         <h2>Cadastro</h2>
-        <form method = "POST" action="controller/PessoaController.php">  <!--Fazendo conexão com o banco de dados-->
+        <form method = "POST" action="controller/PessoaController.php?acao=inserir">  <!--Fazendo conexão com o banco de dados-->
 
         <!--Formulario para pegar os itens e mandar para o banco de dados-->
             <div class="form-group">
