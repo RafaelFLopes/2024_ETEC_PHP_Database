@@ -16,7 +16,7 @@
 
             // Verifica se houve erro na conexão
             if ($this->conexao->connect_error) {
-                // Caso haja erro, interrompe a execução e mostra a mensagem de erro
+                // Caso tiver erro, interrompe a execução e mostra a mensagem de erro
                 die("Falha na conexão: " . $this->conexao->connect_error);
             }
         }

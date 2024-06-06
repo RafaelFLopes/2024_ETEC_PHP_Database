@@ -8,7 +8,9 @@
     <div>&nbsp;</div>
     <div class="container">
         <h2>Cadastro</h2>
-        <form method = "POST" action="controller/PessoaController.php">
+        <form method = "POST" action="controller/PessoaController.php">  <!--Fazendo conexão com o banco de dados-->
+
+        <!--Formulario para pegar os itens e mandar para o banco de dados-->
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite o nome:">

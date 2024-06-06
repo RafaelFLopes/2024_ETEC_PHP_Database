@@ -4,9 +4,11 @@ require_once '../controller/conexao.php';
 
 // Definição da classe Pessoa
 class Pessoa{
+
     // Declaração das propriedades da classe Pessoa
+
     private $id;
-    private $nome;
+    private $nome; 
     private $endereco;
     private $bairro;
     private $cep;
@@ -14,9 +16,10 @@ class Pessoa{
     private $estado;
     private $telefone;
     private $celular;
+
     private $conexao; // Objeto de conexão com o banco de dados
 
-    // Métodos getters e setters para cada propriedade da classe Pessoa
+    // Métodos get e set para cada propriedade da classe Pessoa
     public function getId(){
         return $this->id;
     }
@@ -72,13 +75,13 @@ class Pessoa{
         $this->celular = $celular;
     }
     
-    // Método construtor da classe Pessoa
-    public function __construct(){
-        // Instancia um objeto da classe de conexão
-        $this->conexao = new Conexao();
+    
+    public function __construct(){ // Método construtor da classe Pessoa
+        
+        $this->conexao = new Conexao();// Instancia um objeto da classe de conexão
     }
 
-     // Método para inserir uma nova pessoa no banco de dados
+     // Método para inserir no banco de dados
     public function inserir(){
         $sql = "INSERT INTO cliente (`nome`, `endereco`, `bairro`, `cep`, `cidade`, `estado`, `telefone`, `celular`) VALUES (?,?,?,?,?,?,?,?)"; // Query SQL para inserção de dados na tabela 'cliente'
         $stmt = $this->conexao->getConexao()->prepare($sql); // Prepara a query SQL para execução
